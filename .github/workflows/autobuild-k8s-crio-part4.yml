@@ -15,7 +15,7 @@ env:
   registry: docker.io
   repo: ${{ secrets.REPOSITORY }}
   sealosPatch: ${{ github.event.inputs.sealosPatch }}
-  criType: crio
+  criType: cri-o
 jobs:
   resolve-issue-sealoslatest:
     if: startswith(github.event.comment.body, '/imagebuild_kube') || startswith(github.event.comment.body, '/imagebuild_crio_k8s') || startswith(github.event.comment.body, '/single_imagebuild_crio_k8s_part4') || contains(github.event.inputs.sealosPatch, 'sealos')
